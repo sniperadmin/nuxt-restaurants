@@ -1,12 +1,15 @@
 {
   "connection": "default",
-  "collectionName": "",
+  "collectionName": "restaurants",
   "info": {
-    "name": "dishes",
+    "name": "restaurant",
     "description": ""
   },
   "options": {
-    "timestamps": true
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
   },
   "attributes": {
     "name": {
@@ -20,12 +23,9 @@
       "via": "related",
       "plugin": "upload"
     },
-    "price": {
-      "type": "decimal"
-    },
-    "restaurant": {
-      "model": "restaurants",
-      "via": "dishes"
+    "dishes": {
+      "collection": "dish",
+      "via": "restaurant"
     }
   }
 }

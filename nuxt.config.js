@@ -13,12 +13,16 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ],
+    script: [
+      { src: 'https://js.stripe.com/v3' }
     ]
   },
+
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: { color: '#3B8070' },
   /*
   ** Global CSS
   */
@@ -29,6 +33,8 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    { src: '~plugins/iview', ssr: true },
+    { src: '~plugins/vueFilters', ssr: true }
   ],
   /*
   ** Nuxt.js dev-modules

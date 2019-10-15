@@ -1,44 +1,58 @@
 <template>
-  <b-navbar type="dark" variant="dark">
-    <b-navbar-nav>
-      <b-nav-item href="#">
-        nuxt-restaurants
-      </b-nav-item>
-
-      <!-- Navbar dropdowns -->
-      <b-nav-item-dropdown text="Lang" right>
-        <b-dropdown-item href="#">
-          EN
-        </b-dropdown-item>
-        <b-dropdown-item href="#">
-          ES
-        </b-dropdown-item>
-        <b-dropdown-item href="#">
-          RU
-        </b-dropdown-item>
-        <b-dropdown-item href="#">
-          FA
-        </b-dropdown-item>
-      </b-nav-item-dropdown>
-
-      <b-nav-item-dropdown text="User" right>
-        <b-dropdown-item href="#">
-          Account
-        </b-dropdown-item>
-        <b-dropdown-item href="#">
-          Settings
-        </b-dropdown-item>
-      </b-nav-item-dropdown>
-    </b-navbar-nav>
-  </b-navbar>
+  <Menu mode="horizontal" :theme="theme1" active-name="1">
+    <nuxt-link to="/">
+      <MenuItem name="brand">
+        <Icon type="ios-paper" />
+        nuxt-mall
+      </MenuItem>
+    </nuxt-link>
+    <nuxt-link v-if="!username" :to="{ name: 'users-register' }">
+      <MenuItem name="register">
+        <Icon type="ios-people" />
+        register
+      </MenuItem>
+    </nuxt-link>
+    <nuxt-link v-if="!username" :to="{ name: 'users-signin' }">
+      <MenuItem name="login">
+        <Icon type="ios-people" />
+        login
+      </MenuItem>
+    </nuxt-link>
+    <Submenu v-if="username" name="3">
+      <template slot="title">
+        <Icon type="ios-stats" />
+        {{ username }}
+      </template>
+      <MenuGroup title="options">
+        <MenuItem name="3-1">
+          <div @click="logout">
+            <Icon type="ios-power" />
+            logout
+          </div>
+        </MenuItem>
+      </MenuGroup>
+    </Submenu>
+  </Menu>
 </template>
 
 <script>
-export default {
+import { mapMutations } from 'vuex'
 
+export default {
+  data () {
+    return {
+      theme1: 'light'
+    }
+  },
+  computed: {
+    username () {
+      return this.$store.getters['auth/username']
+    }
+  },
+  methods: {
+    ...mapMutations({
+      logout: 'auth/logout'
+    })
+  }
 }
 </script>
-
-<style lang="scss" scoped>
-
-</style>
