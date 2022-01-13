@@ -1,0 +1,44 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.22.1
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  SNYK-JS-LODASH-567746:
+    - strapi-hook-mongoose > lodash:
+        patched: '2022-01-13T13:51:21.480Z'
+    - strapi-plugin-settings-manager > lodash:
+        patched: '2022-01-13T13:51:21.480Z'
+    - strapi-hook-mongoose > strapi-utils > lodash:
+        patched: '2022-01-13T13:51:21.480Z'
+    - strapi-plugin-settings-manager > strapi-helper-plugin > lodash:
+        patched: '2022-01-13T13:51:21.480Z'
+    - strapi-hook-mongoose > strapi-utils > knex > lodash:
+        patched: '2022-01-13T13:51:21.480Z'
+    - strapi-admin > @babel/preset-env > @babel/plugin-transform-block-scoping > lodash:
+        patched: '2022-01-13T13:51:21.480Z'
+    - strapi-admin > @babel/preset-env > @babel/plugin-transform-modules-umd > @babel/helper-module-transforms > lodash:
+        patched: '2022-01-13T13:51:21.480Z'
+    - strapi-plugin-settings-manager > strapi-helper-plugin > styled-components > @babel/traverse > lodash:
+        patched: '2022-01-13T13:51:21.480Z'
+    - strapi-plugin-settings-manager > strapi-helper-plugin > styled-components > babel-plugin-styled-components > lodash:
+        patched: '2022-01-13T13:51:21.480Z'
+    - strapi-plugin-users-permissions > purest > request > form-data > async > lodash:
+        patched: '2022-01-13T13:51:21.480Z'
+    - strapi-admin > @babel/preset-env > @babel/plugin-transform-parameters > @babel/helper-call-delegate > @babel/traverse > lodash:
+        patched: '2022-01-13T13:51:21.480Z'
+    - strapi-plugin-settings-manager > strapi-helper-plugin > styled-components > @babel/traverse > @babel/generator > lodash:
+        patched: '2022-01-13T13:51:21.480Z'
+    - strapi-admin > @babel/preset-env > @babel/plugin-transform-exponentiation-operator > @babel/helper-builder-binary-assignment-operator-visitor > @babel/helper-explode-assignable-expression > @babel/traverse > lodash:
+        patched: '2022-01-13T13:51:21.480Z'
+    - strapi-plugin-settings-manager > strapi-helper-plugin > styled-components > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash:
+        patched: '2022-01-13T13:51:21.480Z'
+    - strapi-plugin-settings-manager > strapi-helper-plugin > styled-components > babel-plugin-styled-components > @babel/helper-module-imports > @babel/types > lodash:
+        patched: '2022-01-13T13:51:21.480Z'
+    - strapi-admin > @babel/preset-env > @babel/plugin-transform-exponentiation-operator > @babel/helper-builder-binary-assignment-operator-visitor > @babel/helper-explode-assignable-expression > @babel/traverse > @babel/generator > lodash:
+        patched: '2022-01-13T13:51:21.480Z'
+    - strapi-plugin-settings-manager > strapi-helper-plugin > styled-components > @babel/traverse > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash:
+        patched: '2022-01-13T13:51:21.480Z'
+    - strapi-admin > @babel/preset-env > @babel/plugin-transform-exponentiation-operator > @babel/helper-builder-binary-assignment-operator-visitor > @babel/helper-explode-assignable-expression > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash:
+        patched: '2022-01-13T13:51:21.480Z'
+    - strapi-admin > @babel/preset-env > @babel/plugin-transform-exponentiation-operator > @babel/helper-builder-binary-assignment-operator-visitor > @babel/helper-explode-assignable-expression > @babel/traverse > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash:
+        patched: '2022-01-13T13:51:21.480Z'
